@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script</title>
+</head>
+<body>
+    <h1>First Java Script</h1>
+    <h1> Arithemetic Operations</h1>
+    <h3>addition + </h3>
+    <h3>substraction - </h3>
+    <h3>Multiplication * </h3>
+    <h3>Division / </h3>
+    <h3>Modulus % </h3>
+    <h1>Comparison Operators</h1>
+    <h3>Equal = assignment</h3>
+    <h3>double Equal ==compare</h3>
+    <h3>Tripple equal === strictly compare</h3>
+    <h3>not double equal != </h3>
+    <h3>not strictly equal !== </h3>
+    <h3>less than < </h3>
+    <h3>greater than > </h3>
+    <h3>greater than or equal to >= </h3>
+    <h3>less than or equal to <= </h3>
+    <h3> variable scope are global and local </h3>
+
+    <script>
+        alert("Hello,World!");
+        console.log("Hello Nigeria,my JavaScript code")
+            // Variable decleration 
+            // useing var, let, const
+
+
+            // useing var
+
+            var numberOfStudent = 5;
+            var numberOfClasses = 6;
+            console.log("this is no of student", numberOfStudent);
+            console.log("this is no of clases", numberOfClasses)
+
+
+            // useing let
+           
+            const presentTime = Date();
+            let studentName;
+            studentName="Comrade";
+            let greeting;
+    
+            if(presentTime <12){
+                greeting = "Good Morning";
+            }else {
+                greeting = "Good Evening";
+            }
+            console.log(greeting + " " + studentName)
+            console.log("trying to check student name",studentName)
+            // Useing Boolean Data types
+            const a = 5;
+            const b =5;
+            console.log("checking of boolean", a==b);
+
+            var x = 5; 
+
+            function getNumber(){
+                var x = 5
+                console.log("show answer", x)
+            }
+    </script>
+     <!-- Java script class 2 -->
+     <script>
+        // Case1
+        // alert("8" / "2");
+
+
+        // case2 
+        // alert("8" / 2);
+
+        // case3
+        // alert(8 / 2);
+
+    //  Scenerio 2
+
+        let myString = "2024";
+        alert(typeof myString)
+
+        let convertToNum = Number(myString)
+        console.log(typeof convertToNum);
+        let myAlpha = Number("lorem ipsum dolor sit amet, consecture");
+        console.log(myAlpha);
+        let myBoolean = true;
+        let myWhiteSpace = "    ";
+        console.log(Number(myBoolean));
+        console.log(Number(myWhiteSpace));
+        
+        // Boolean Conversion
+        console.log(Boolean(1))
+
+        // Array
+        // [0, 1, 2, 3, 4, 5,6]
+
+        const myCart = ["iPhone", "SonyTV", "Samsung"]
+        const myObject = [{'name':'luthor', 'gender':"male"}, {}, {}, {}]
+        const firstArray = [1, 2, 3,]
+        const secondArray = [6, 7, 8]
+        const arrayInArray = [ myCart, firstArray, secondArray]
+        console.log("This array contain another array", arrayInArray);
+
+        // Array Methods
+        // length,push,pop,shift,unshift
+
+    // array Length
+     console.log(myCart,length);
+     console.log(myCart.indexOf("iPhone"));
+     const listA = [1, 2, 3]
+     const listB = new Array(6);
+     console.log(listB,length);
+      console.log(typeof listA);
+
+    //   array push method
+    const animals = ['Cat', 'Dog', 'Fish'];
+     animals.push('cow');
+    console.log(animals);
+    
+     </script>
+</body>
+</html>
