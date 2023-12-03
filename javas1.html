@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <script>
+    function myFunction() {
+      document.getElementById("try").innerHTML = "Paragraph changed.";
+    }
+    </script>
+    </head>
+<html>
+<body>
+    <div id="honey"></div>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change HTML content.</p>
+<p id="try">A Paragraph.</p>
+<p id="addition"></p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+<img id="bulb-image" src="pic_bulboff.gif" width="100px" alt="">
+ 
+<button onclick="document.getElementById ('bulb-image').src='pic_bulbon.gif'">bulb on</button>
+
+<button onclick="document.getElementById('bulb-image'). src='pic_bulboff.gif' ">bulb off</button>
+
+<button type="button" onclick="document.getElementById('demo').style.display='none'">Click Me!</button >
+<button type="button" onclick="document.getElementById('demo').style.display='block' ">click me to display</button>
+<button type="button" onclick="document.getElementById('demo').innerHTML = 'JavaScript can change html content' ">back</button>
+<button onclick="window.print()">Print this page</button>
+<script>
+    document.getElementById('honey').innerHTML = "add to java script";
+    document.getElementById('addition').innerHTML = 5+6;
+    document.write(5 + 6);
+    window.alert(5+6);
+    console.log(window);
+    console.log(5 +6);
+
+    let x,y,z;
+    x = 5;
+    y = 6;
+    z = x+y;
+
+    document.getElementById('demo').innerHTML = 
+    "the value of z is "+ z +".";
+</script>
+</body>
+</html>
