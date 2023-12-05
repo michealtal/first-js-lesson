@@ -27,18 +27,18 @@
     <h3> variable scope are global and local </h3>
 
     <script>
-        // alert("Hello,World!");
+          //alert("Hello,World!");
         console.log("Hello Nigeria,my JavaScript code")
             // Variable decleration 
             // useing var, let, const
 
 
-            // useing var
+            // Useing var
 
             var numberOfStudent = 5;
             var numberOfClasses = 6;
             console.log("this is no of student", numberOfStudent);
-            console.log("this is no of clases", numberOfClasses)
+            console.log("this is no of classes", numberOfClasses)
 
 
             // useing let
@@ -54,7 +54,7 @@
                 greeting = "Good Evening";
             }
             console.log(greeting + " " + studentName)
-            console.log("trying to check student name",studentName)
+             console.log("trying to check student name",studentName)
             // Useing Boolean Data types
             const a = 5;
             const b =5;
@@ -84,13 +84,13 @@
          let myString = "2024";
         // alert(typeof myString)
 
-        let convertToNum = Number(myString)
-        console.log(typeof convertToNum);
+         let convertToNum = Number(myString)
+          console.log(typeof convertToNum);
         let myAlpha = Number("lorem ipsum dolor sit amet, consecture");
          console.log(myAlpha);
          let myBoolean = true;
         let myWhiteSpace = "  ";
-         console.log(Number(myBoolean));
+          console.log(Number(myBoolean));
          console.log(Number(myWhiteSpace));
         
     //     // Boolean Conversion
@@ -115,7 +115,7 @@
       const listA = [1, 2, 3]
       const listB = new Array(6);
       console.log(listB,length);
-       console.log(typeof listA);
+      console.log(typeof listA);
 
      //   array push method
      const animals = ['Cat', 'Dog', 'Fish'];
@@ -130,22 +130,22 @@ const myFish = ["angel", "clown", "mandarin", "sturgeon"]
 
     // shift
     const shiftMyFish = myFish.shift();
-    console.log(shiftMyFish);
-    console.log(myFish);
+     console.log(shiftMyFish);
+     console.log(myFish);
 
     // unshift
-    const unshiftMyFish = myFish.unshift("Titus", "Angel")
+    const unshiftMyFish = myFish.unshift("Titus","angels")
     console.log(unshiftMyFish);
     console.log(myFish);
 
 //    concat
 const colourBox = ["red", "green"];
 const pebblesBox = ["Sapphire", "Coral"];
-const merggedArray =  colourBox.concat(pebblesBox)
+const mergeArray =  colourBox.concat(pebblesBox)
 // console.log(colourBox.concat(pebblesBox));
-console.log(merggedArray);
+console.log(mergeArray);
 
-const reversed = merggedArray.reverse();
+const reversed = mergeArray.reverse();
 console.log("reversed:", reversed);
 
 // join
@@ -163,8 +163,8 @@ console.log(classActivities)
 console.log(classActivities.join(""))
 
 // useing cartAt() function
- const myStr = new String("Apple");
- console.log(myStr.charAt(0)); 
+  const myStr = new String("Apple");
+  console.log(myStr.charAt(0)); 
 
     // flat
     const arrayToFlat = [0, 1, 2, 4,[2, 3, 5]]
@@ -184,6 +184,84 @@ console.log(classActivities.join(""))
     const countries = ['South Africa', 'Nigeria', 'Albania', 'Argentina'];
     countries.splice(1,1, 'Egypt');
     console.log(countries);
+
+    // nullish coalescing assignment and operators (??=)
+
+    const vat = null;
+    const addedVat = 100;
+    console.log(vat ?? addedVat);
+    console.log(vat)
+
+    const discount = 0;
+    console.log(discount ?? 15);
+
+
+    // // useing of or ||
+     let score = 0;
+     let pass = 0 || 60;
+     const mySti = "man";
+     const fillStr = "western Avenue";
+     const str = mySti || fillStr;
+     console.log(str);
+     console.log(score ?? 5);
+     console.log(pass);
+
+    //  useing AND operators && 
+
+    const c = 16;
+    const d = -12;
+    console.log(c > 0 && d >0);
+
+    console.log(true || false && false)
+    // expected output true 
+    console.log((2===3) || (4 < 0) && (1 === 1));
+    // expected output false
+
+    // logical AND  assignment &&=
+    let e = 1;
+    let f = 0;
+
+    e &&= 2;
+    f &&= 4;
+    console.log(e);
+     console.log(f);
+
+    // logic Not (!)
+    const g = 3;
+    const h = -2;
+
+      console.log(!(g >0 || f > 0));  //expected false
+
+      //logical or assignment (||=)
+      const cartItem = {price: 200, name : ''};
+      cartItem.name ||= "Air freshener";
+      console.log(cartItem.name);
+      cartItem.price ||= 100;
+      console.log(cartItem.price);
+
+    //   logical Multipication assignment (*=)
+    //  leftOperand *= rightOperand
+     let p = 4;
+     console.log((p *= 2 )); //p=p*2
+
+    //  logical addition assignment (+=)
+    let q = 5
+    console.log((q += 3 ));
+
+    // logical subtraction assignment (-=)
+    let i = 6
+    console.log((i -= 3));
+
+    const footBallers = ["messi","ronaldo", "thiago", "benzema " ];
+    console.log(footBallers);
+
+    const foot = footBallers.shift();
+    console.log(foot);
+    
+ const unshift2 =  footBallers.unshift('haaland');
+ console.log(unshift2);
+ console.log(footBallers);
+    
      </script>
 </body>
 </html>

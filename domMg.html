@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing DOM</title>
+</head>
+<body>
+    <h1>Changing HTML Element text content</h1>
+    <div>
+        <h5>
+            make details for sub
+        </h5>
+    </div>  
+    <div id ="update_text">
+
+    </div> 
+    <button onclick="update()">Update</button>
+    <div id="second-update">
+
+    </div>
+     <button onclick="secondUpdate()">click me </button>
+    <script>
+        function update(){
+            var toUpdate = document.getElementById("update_text");
+            toUpdate.textContent = "we are running some update kindly check bacK later";
+            console.log("you click a button");
+        }
+
+        function secondUpdate() {
+         var secondUpdate = document.getElementById("second-update");
+         secondUpdate.textContent = "we have some issue check back later";
+         console.log("wawu");
+        }
+    </script>
+</body>
+</html>

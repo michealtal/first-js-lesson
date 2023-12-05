@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+
+<script>
+//     Slice Middle Elements:
+// Write a function that extracts the middle elements of an array using slice. If the array length is odd, 
+// return a single middle element; if even, return two middle elements.
+
+function findMiddleToys(toys) {
+    const numberOfToys = toys.length;
+    const middleIndex = Math.floor(numberOfToys / 2); // Finding the middle
+
+    if (numberOfToys % 2 === 0) { // If there are even toys
+        const middleToys = toys.slice(middleIndex - 1, middleIndex + 1);
+        return middleToys; // Return two toys from the middle
+    } else { // If there are odd toys
+        const middleToy = toys[middleIndex];
+        return [middleToy]; // Return the one toy from the middle
+    }
+}
+
+// Example usage:
+const toyLine = ['Teddy', 'Doll', 'Car', 'Lego', 'Train'];
+const middleToys = findMiddleToys(toyLine);
+console.log("Middle toy(s):", middleToys);
+
+
+</script>
+</html>
