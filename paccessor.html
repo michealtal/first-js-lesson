@@ -6,9 +6,27 @@
     <title>pacces</title>
 </head>
 <body>
+    <div>
+        <label for="">entered password</label><br>
+        <input type="text" id="user_entry" placeholder="********"><br>
+        <button type="button" onclick="loginAuth()">Log In</button>
+    </div>
     <h1>property Accessor</h1>
 
     <script>
+
+        function loginAuth(){
+            const userInput = document.getElementById("user_entry").value;
+            const password = "12345";
+            if(userInput === password){
+                window.location.assign("welcome.html");
+                console.log("valid credentials");
+            }else{
+                console.log("invalid credentials");
+            }
+            console.log(userInput)
+           
+        }
         const user = {
             name : 'Batman',
             email:"test@example.com"
@@ -62,6 +80,44 @@ console.log(secondUser['place_visited']);
 const {name,age} = secondUser
 
 console.log(name,age)
+
+// concatenation of string 
+console.log("website:" + "skills");
+console.log("a string" + 123);
+
+// concatenation assignment of strings
+let str = "Website: ";
+str +="itskills";
+console.log(str);
+
+// if statement
+const Age = 24;
+ if (Age >=24){
+    console.log("must be jailed !");
+ }else{
+    console.log("must not be jailed")
+ };
+
+//  simple aunthentication
+const userName = "admin";
+const password = "12345";
+const enteredPass = "";
+if (enteredPass === password){
+   consol.log("welcome");
+}else{
+    console.log("invalid password");
+}
+
+const income = 50000;
+const taxA=25000;
+const taxB=45000;
+if (income >= taxB){
+   console.log("belong to classB")
+}else if (income >= taxA){
+    console.log("belong to class a")
+}else{
+    console.log("needs financial aids")
+}
     </script>
 </body>
 </html>

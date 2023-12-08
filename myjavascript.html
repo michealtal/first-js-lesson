@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <div id="example">
+    my main text
+    </div>
+    <div id="demo"></div>
+    <button type="button" onclick="myFunction()">click me</button>
+    <button type="button" onclick="document.getElementById('demo').innerHTML='mytext'"> try me </button>
+    <div id="demo2"></div>
+
+    <script>
+function myFunction (){
+    document.getElementById("example").innerHTML = "textchange";
+}
+function myAlpha () {
+    document.getElementById('demo2').innerHTML = 1 + 3;
+}
+
+const myCart = ['Phone', 'Laptop','Textbook', 'film', 'tripod']
+console.log(myCart.indexOf('Textbook'))
+console.log(myCart,length)
+  myCart.push('ring light')
+  console.log(myCart)
+  const popped = myCart.pop()
+  console.log(myCart)
+  
+  myCart.shift('phone')
+  console.log(myCart)
+
+  const mainCart= myCart.unshift('phone', 'macBook')
+  console.log(mainCart)
+  console.log(myCart)
+    </script>
+</body>
+</html> 

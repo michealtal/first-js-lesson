@@ -30,11 +30,12 @@
 <button type="button" onclick="document.getElementById('demo').style.display='block' ">click me to display</button>
 <button type="button" onclick="document.getElementById('demo').innerHTML = 'JavaScript can change html content' ">back</button>
 <button onclick="window.print()">Print this page</button>
+
 <script>
     document.getElementById('honey').innerHTML = "add to java script";
     document.getElementById('addition').innerHTML = 5+6;
     document.write(5 + 6);
-    window.alert(5+6);
+    // window.alert(5+6);
     console.log(window);
     console.log(5 +6);
 
@@ -45,6 +46,59 @@
 
     document.getElementById('demo').innerHTML = 
     "the value of z is "+ z +".";
+
+    // paccessor 
+    const user = {
+        name : 'micheal',
+        dob :'2003',
+    }
+    console.log (user)
+    const updatedUser = {
+        ...user,gmail:'michealtalabi09@gmail.com',
+    }
+    console.log(updatedUser.gmail)
+    const address = 'micheal street'
+    const lastUpdate = {
+        ...updatedUser,address,
+    }
+    console.log(lastUpdate)
+    const order = {
+        itemName: "Pizza",
+            quantity:100,
+            deliveryType: "pick",
+            iceCream:['coldstone', 'vallina ice cream', 'chocolate ice-cream','strawberry ice cream', 'whipped cream'],
+            ingredient : {
+                flavour:"onion flavour",
+                spice:"Bell pepper"
+            }
+    }
+    console.log(lastUpdate.address)
+    console.log(order.iceCream[3])
+    console.log( order.ingredient.spice)
+    console.log(order['quantity'])
+    console.log(order['iceCream'])
+
+    const{name,dob} = user;
+    console.log(name,dob)
+
+    const oddObject = {
+    'prop-3': 'three',
+    '3' : 'three',
+
+};
+ console.log(oddObject ['prop-3'])
+console.log(oddObject);
+
+const a = 20;
+const b = "";
+  
+if(a<10){
+    let b = "welcome";
+    console.log(b) 
+}else{
+    let b = "please retry";
+    console.log(b)
+}
 </script>
 </body>
 </html>
