@@ -13,16 +13,68 @@
     <button type="button" onclick="myFunction()">click me</button>
     <button type="button" onclick="document.getElementById('demo').innerHTML='mytext'"> try me </button>
     <div id="demo2"></div>
-
+    <center>
+       <form id = myForm >
+           <label for="name">Name</label><br>
+           <input id="userName" type="text" placeholder="name"><br>
+        <label for="password">Password</label><br>
+        <input id="userPassword" type="text" placeholder="password"><br>
+        <label for="email">Email</label><br>
+        <input id="user_entry"type="text" placeholder="email">
+        <button type="button" onclick="myForm()">send</button>
+       </form>
+       </center>
+    <center>
+       <form id = userForm >
+           <label for="name">Name</label><br>
+           <input id="myName" type="text" placeholder="name"><br>
+        <label for="password">Password</label><br>
+        <input id="myPassword" type="text" placeholder="password"><br>
+        <label for="email">Email</label><br>
+        <input id="myEmail"type="text" placeholder="email"><br>
+        <button id="submit">send</button>
+       </form>
+       </center>
     <script>
 function myFunction (){
     document.getElementById("example").innerHTML = "textchange";
 }
-function myAlpha () {
-    document.getElementById('demo2').innerHTML = 1 + 3;
+    document.getElementById("demo2").innerHTML = 1 + 3;
+
+function myForm (){ 
+    const user = document.getElementById("userPassword").value;
+    const password = "12345";
+  if (user === password){
+    console.log ("valid input ")
+  }else{
+    console.log("invalid input")
+  }
+  console.log (user)
+};
+
+const userProfile = {
+   userForm:document.getElementById("userForm"),
+   myName:document.getElementById("myName"),
+  myPassword:document.getElementById("myPassword"),
+   myEmail:document.getElementById("myEmail")
 }
 
-const myCart = ['Phone', 'Laptop','Textbook', 'film', 'tripod']
+const updateProfile = {
+ ... userProfile
+}
+updateProfile.userForm.addEventListener("submit",onSubmit)
+
+function onSubmit(e){
+    e.preventDefault(); 
+    console.log(userProfile.myName.value);
+    console.log(userProfile.myPassword.value);
+    console.log(userProfile.myEmail.value);
+    console.log (updateProfile.value);
+}
+
+
+const myCart = ['Phone', 'Laptop','Textbook', 'film', 'tripod',['pss', 'pills', 'fame', 'push', 'foot']];
+const myOrder = ['pizza', 'almondFruit','pearl','chicken','chips']
 console.log(myCart.indexOf('Textbook'))
 console.log(myCart,length)
   myCart.push('ring light')
@@ -36,6 +88,148 @@ console.log(myCart,length)
   const mainCart= myCart.unshift('phone', 'macBook')
   console.log(mainCart)
   console.log(myCart)
+ const myConcat = myCart.concat(myOrder);
+ console.log(myConcat)
+//  myConcat.reverse()
+//  console.log(myConcat)
+
+console.log(myCart.join("_"))
+console.log(myCart.flat())
+console.log(myCart.splice(1,3))
+
+ const country = ['england', 'spain', 'italy', 'nigeria','scotland'];
+ country.splice(4,0,'senegal');
+ console.log(country)
+
+
+let myUser = {
+    name:'micheal',
+    age:20,
+    dob:'08,11,2003',
+    hobbies:['movies','music','sport'],
+    places : {
+        country:'spain',
+        address:'micheal_street'
+        
+    }
+}
+const updateUser = {
+    ...myUser,email:'michealt@gmail.com'
+}
+console.log (myUser.places.country);
+console.log(updateUser.email)
+
+const oddObject = {
+   'propt-3' : 'three',
+   '3' :'three'
+
+}
+console.log(oddObject['propt-3'])
+console.log(myUser.hobbies[1]);
+
+ const {name,age} = myUser;
+ console.log(name,age)
+ length
+//  looping
+let toDo = [ 
+    {
+        id:'micheal',
+        tax:'take out trash',
+        isCompleted:true,
+    },
+    {
+        id:'john',
+        tax:'meeting with boss',
+        isCompleted:true,
+    },
+    {
+        id:'mary',
+        tax:'do pedicures',
+        isCompleted:false,
+    }
+] ;
+ toDo.forEach(function(toDo){
+    console.log(toDo.tax)
+ })
+
+const toDoText = toDo.map (function(toDo) {
+    return toDo.tax;
+})
+console.log(toDoText)
+
+const toDoCompleted = toDo.filter(function(toDo){
+    return  toDo.isCompleted === true;
+}).map(function(toDoCompleted){
+    return toDoCompleted.tax;
+})
+console.log(toDoCompleted)
+ console.log(toDo)
+// // how to use jason
+// const  toDoJSON = JSON.stringify(toDo);
+// conosole.log(toDoJSON);
+   
+ for (let i = 0; i<=10; i++)
+ console.log(i)
+
+//    assignment operators
+
+// null operators ?? 
+const x = null;
+const y = 20;
+console.log(x ?? y)
+
+const discount = 0;
+const z = 15;
+console.log(discount ?? z);
+
+const people = 10;
+const crime = 0;
+console.log(people || crime );
+
+let score = 0;
+     let pass = 0 || 60;
+     const mySti = "man";
+     const fillStr = "western Avenue";
+     const str = mySti || fillStr;
+     console.log(str);
+     console.log(score ?? 5);
+     console.log(pass);
+
+    //  and operators
+
+    const c = 16;
+    const d = -12;
+    console.log(c > 0 && d >0);
+
+    // logical and operators &&=
+    let medicine = 0
+    let sick = 20
+
+    medicine &&= 4
+    sick &&= 30
+    console.log(medicine)
+    console.log(sick)
+
+    const item = {price:200 , name:""}
+     item.name ||= "air freshner"
+     console.log(item.name)
+     item .price ||= 100
+     console.log(item.price)
+    //  logical multiplicaton operators 
+
+     let up = 10
+     console.log(( up *= 4))
+
+     const points = 20;
+     const vir =15
+ if (points >= 20){
+    console.log('road is on the right welcome')
+ }else if(points == vir) {
+    console.log("road right on trial")
+ }else{
+    console.log('road is on the left get out ') 
+ }
+
     </script>
 </body>
 </html> 
