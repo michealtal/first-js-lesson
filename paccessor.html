@@ -118,6 +118,77 @@ if (income >= taxB){
 }else{
     console.log("needs financial aids")
 }
+
+const grade = "A"; 
+document.write("Entering switch block <br/>");
+    switch (grade){
+        case "A":
+        document.write(" good job <br/>");
+        break;
+
+        case "B":
+        document.write("pretty good <br> ")
+        case "C":
+        document.write("passed <br> ")
+        case "D":
+        document.write("not so good  <br>")
+        case "F":
+        document.write("failed  <br>")
+
+        default:document.write("unknow grade <br/>")
+        
+    }
+    document.write("Exiting code block <br/>")
+
+
+     const day = "Monday";
+     switch (day){
+        case "Monday":document.write("Black pant and white Tee <br>");
+        break
+        case "Tuesday":document.write("Christmas Red and white<br> ");
+        break;
+        case "Wednesday":document.write("Casual Outfit <br> ");
+        break;
+        case "Thursday":document.write("red pant and green dress <br> ");
+        break;
+        case "Friday":document.write("jump suit and Givenchi bag <br> ");
+        break;
+        case "Saturday":document.write("mofty and flip flop <br> ");
+        break;
+        default: document.write("Go naked <br/>");
+     }
+
+
+    //  while loop 
+    let x = 0;
+    while (x < 10) {
+        x++;
+        console.log(x);
+        console.log("micheal slap round"+x);
+    }
+    console.log(x)
+
+    // do while 
+    let count = 0;
+    document.write("lets start counting" + "<br/>");
+    do{
+        document.write("Count is :" + count + "<br/>");
+        count++;
+    }
+    while (count < 8);
+    document.write("do while has ended ")
+
+    // for loop
+    let Count;
+    document.write("Starting Loop" + "<br/>");
+
+    for(Count =  0; Count < 10; Count++){
+        document.write("Current Count :" + Count);
+        document.write("<br/>");
+    } 
+  document.write("<br/>")
+    // for in loop
+
     </script>
 </body>
 </html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For in loop</title>
+</head>
+<body>
+    <p>Let's set the variable to different value and then try ... </p>
+   <script type="text/JavaScript">
+
+   let aProperty;
+   document.write("Navigator Object properties <br/>");
+   for (aProperty in navigator) {
+    document.write(aProperty);
+    document.write("<br/>");
+   }
+   document.write("Exiting from the loop");
+   const vehicle = {
+    color:"black",
+    model:"ford",
+    millage:"48000km",
+    transmission:"automatic",
+    price:"$1000",
+   }
+   for (aProp in vehicle) {
+    document.write(aProp);
+    document.write("<br/>");
+   }
+
+   function multiplyNumber  (param1, param2) {
+       const result = param1 * param2;
+       return result;
+   };
+
+   console.log(multiplyNumber(7,2));
+
+   function myNumber(Nums1,Nums2) {
+    const result = Nums1 + Nums2;
+    return result;
+   }
+   console.log(myNumber(14,3));
+
+   const multiplyNumberArrow = (param1, param2)=> param1 * param2;
+   console.log(multiplyNumberArrow(7,2));
+
+   const calculatePercentageScore = (param1, param2) => {
+    const baseResult = param1 / param2;
+    const result = baseResult * 100
+    return Math.round(result);
+   }
+   console.log(calculatePercentageScore(2,7));
+
+   const MeanNumber = (param1,param2,param3) => {
+     const MeanResult = param1+param2+param3;
+     const result = MeanResult/3;
+     return Math.round (result);
+   }
+   console.log(MeanNumber(7,7,12));
+//  function inside a function
+   const parentFunction = () => {
+    const name = "bassy";
+    function spiltName() {
+        console.log(name.split(""))
+    }
+    
+    
+    spiltName();
+    setTimeout(spiltName,5000); 
+};
+   parentFunction();
+
+//    generator function 
+
+
+   </script>
+</body>
+</html>
