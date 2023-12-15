@@ -28,10 +28,36 @@ function findMiddleToys(toys) {
     }
 }
 
+function modifyWord(word) {
+    if (word.charAt(0) === 'a' && word.charAt(word.length - 1) === 'a') {
+        return word.substring(1, word.length - 1);
+    } else {
+        return word;
+    }
+}
+console.log(modifyWord('anastatia'))
+console.log(modifyWord('peter'))
+
 // Example usage:
 const toyLine = ['Teddy', 'Doll', 'Car', 'Lego', 'Train'];
 const middleToys = findMiddleToys(toyLine);
 console.log("Middle toy(s):", middleToys);
+
+let str = "Hello";
+let character = str.charAt(1); // Retrieves the character at index 1
+
+console.log(character); // Output: "e"
+
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+}
+
+};
+console.log(person.fullName())
 
 
 </script>
